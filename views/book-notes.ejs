@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+    <div class="book-div">
+        <div class="book-img-div">
+            <img src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-M.jpg" alt="">
+        </div>
+        <div class="book-info-div">
+            <p class="book-title">Atomic Habits</p>
+            <p class="book-author">By <%= book.author %></p>
+            <p class="book-date">Date Read : <%= book.date %></p>
+            <p class="book-rating">My Ratings : <%= book.rating %>/10</p>
+            <p class="book-summary"><%= book.summary %></p>
+        </div>
+    </div>
+    <div class="book-notes-div book-div">
+        <p class="notes"><%= book.notes %></p>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

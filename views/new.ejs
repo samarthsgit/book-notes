@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+
+
+<form action="/submit" method="post" id="new-form">
+    <div class="entries">
+        <label for="name">Book Name:</label>
+        <input type="text" name="name">
+    </div>
+    <div class="entries">
+        <label for="author">Author:</label>
+        <input type="text" name="author">
+    </div>
+    <div class="entries">
+        <label for="isbn">ISBN:</label>
+        <input type="text" name="isbn">
+    </div>
+    <div class="entries">
+        <label for="date">Date Read:</label>
+        <input type="text" name="date">
+    </div>
+    <div class="entries">
+        <label for="rating">Ratings:</label>
+        <input type="text" name="rating">
+    </div>
+    <div class="entries">
+        <label for="summary">Summary:</label>
+        <textarea name="summary" id="summary"></textarea>
+    </div>
+    <div class="entries">
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+    </div>
+    <div class="entries" id="submit-div">
+        <button type="submit" id="submit">Submit</button>
+    </div>
+    
+    
+</form>
+
+
+<%- include('partials/footer.ejs') %>

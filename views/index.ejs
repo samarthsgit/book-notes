@@ -1,0 +1,23 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+    <% bookList.forEach(book => { %>
+        <form action="/book" method="POST" id="form<%= book.id %>">
+            <input type="hidden" name="bookid" value="<%= book.id %>">
+            <div class="book-div">
+                <div class="book-img-div">
+                    <img src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-M.jpg" alt="" onclick="document.getElementById('form<%= book.id %>').submit()">
+                </div>
+                <div class="book-info-div">
+                    <p class="book-title" onclick="document.getElementById('form<%= book.id %>').submit()"><%= book.name %></p>
+                    <p class="book-author">By <%= book.author %></p>
+                    <p class="book-date">Date Read : <%= book.date %></p>
+                    <p class="book-rating">My Ratings : <%= book.rating %>/10</p>
+                    <p class="book-summary"><%= book.summary %></p>
+                </div>
+            </div>
+        </form>
+    <% }) %>
+</div>
+
+<%- include('partials/footer.ejs') %>
